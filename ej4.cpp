@@ -24,12 +24,10 @@ int main () {
   //Salida del archvio
 /*   ofstream sal;
   sal.open("./archivosDot/grafo2.dot");
-
   //leer Archivos
   leerMatriz(matriz);
   // Muestra los grafos en la terminal
   mostrarMatriz(matriz);
-
   // Genera los grafos en formato DOT
   // --------------------------------
   generarGrafo(matriz,vertices,sal);
@@ -56,10 +54,10 @@ void crearMatrizIncidencia(int n,int a) {
   for (int i = 0; i < n; i++) {
     for (int j = i+1; j < n; j++) {
       for (int k = 0; k < n; k++) {
-        if (i == j || j == k)
-          matrizIncidencia << "0 ";
-        else
+        if (i == k || j == k)
           matrizIncidencia << "1 ";
+        else
+          matrizIncidencia << "0 ";
       }
       matrizIncidencia << endl;
     }
