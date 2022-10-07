@@ -1,0 +1,16 @@
+/* graph A {
+  a -- b -- c;
+  b -- d;
+} */
+
+/* digraph B {
+  r -> r;
+  a -> n -> a;
+  v -> v;
+} */
+
+digraph C {
+  r -> r [label="1"][color="blue"];
+  a -> n -> a [label="2"][color="red"];
+  v -> v [label="3"][color="green"];
+}
